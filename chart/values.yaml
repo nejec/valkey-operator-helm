@@ -2,54 +2,39 @@
 fullnameOverride: ""
 # -- Override name
 nameOverride: ""
-
 # -- Replica count
 replicaCount: 1
-
 image:
   # -- Image repository
-  repository: ghcr.io/sap/valkey-operator
+  repository: ghcr.io/nejec/valkey-operator
   # -- Image tag (defauls to .Chart.AppVersion)
   tag: ""
   # -- Image pull policy
   pullPolicy: IfNotPresent
-
 # -- Image pull secrets
 imagePullSecrets: []
-
 # -- Additional pod labels
 podLabels: {}
-
 # -- Additional pod annotations
 podAnnotations: {}
-
 # -- Node selector
 nodeSelector: {}
-
 # -- Affinity settings
 affinity: {}
-
 # -- Topology spread constraints (if unspecified, default constraints for hostname and zone will be generated)
 topologySpreadConstraints: []
-
 # -- Default topology spread policy for hostname
 defaultHostNameSpreadPolicy: ScheduleAnyway
-
 # -- Default topology spread policy for zone
 defaultZoneSpreadPolicy: ScheduleAnyway
-
 # -- Tolerations
 tolerations: []
-
 # -- Priority class
 priorityClassName: ""
-
 # -- Pod security context
 podSecurityContext: {}
-
 # -- Container security context
 securityContext: {}
-
 resources:
   limits:
     # -- CPU limit
@@ -68,7 +53,6 @@ service:
   type: ClusterIP
   # -- Service port
   port: 443
-
 pdb:
   # -- Whether to create a PodDisruptionBudget for the webhook
   enabled: true
@@ -81,7 +65,6 @@ pdb:
   minAvailable: "1"
   # -- Number of pods that are unavailable after eviction as number or percentage (e.g: 50%); has higher precedence over `pdb.minAvailable`
   maxUnavailable: ""
-
 webhook:
   certManager:
     # -- Whether to use cert-manager to manage webhook tls
@@ -92,7 +75,6 @@ webhook:
     issuerKind: ""
     # -- Issuer name (only relevant if enabled is true; if unset, a self-signed issuer is used)
     issuerName: ""
-
 metrics:
   podMonitor:
     # -- Whether to create a PodMonitor resource
