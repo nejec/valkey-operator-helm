@@ -1,6 +1,6 @@
 # valkey-operator
 
-![Version: 0.1.21](https://img.shields.io/badge/Version-0.1.21-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.1.14](https://img.shields.io/badge/AppVersion-v0.1.14-informational?style=flat-square)
+![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.1.1](https://img.shields.io/badge/AppVersion-v0.1.1-informational?style=flat-square)
 
 A Helm chart for https://github.com/sap/valkey-operator
 
@@ -11,7 +11,7 @@ A Helm chart for https://github.com/sap/valkey-operator
 | fullnameOverride | string | `""` | Override full name |
 | nameOverride | string | `""` | Override name |
 | replicaCount | int | `1` | Replica count |
-| image.repository | string | `"ghcr.io/sap/valkey-operator"` | Image repository |
+| image.repository | string | `"ghcr.io/nejec/valkey-operator"` | Image repository |
 | image.tag | string | `""` | Image tag (defauls to .Chart.AppVersion) |
 | image.pullPolicy | string | `"IfNotPresent"` | Image pull policy |
 | imagePullSecrets | list | `[]` | Image pull secrets |
